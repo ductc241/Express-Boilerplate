@@ -1,0 +1,13 @@
+extends ../layouts/main.pug
+
+block content
+    form(action = '/api/v2/auth/login' method = 'post')
+        div
+            span Username
+            input( type = "text" id = "username" name = "username")        
+        div
+            span Password
+            input( type = "text" id = "password" name = "password")
+        button(type = 'submit') Submit
+
+

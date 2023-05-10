@@ -1,0 +1,11 @@
+extends ../layouts/main.pug
+
+block content
+    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat explicabo dicta.
+    button(type = 'button' id = 'play-button') Click to get user information
+
+    script(type="text/javascript").
+        document.getElementById('play-button').addEventListener('click', async () => {
+          window.location.pathname = "v1/home/user-detail"
+        });
+
