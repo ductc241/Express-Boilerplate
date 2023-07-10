@@ -1,3 +1,5 @@
+// Test env file, you can romove. Check "Npm start"
+
 const path = require("path");
 
 require("dotenv").config({
