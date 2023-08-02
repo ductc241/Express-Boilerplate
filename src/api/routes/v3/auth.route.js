@@ -98,14 +98,14 @@ router.get("/refresh-token", async (req, res) => {
 
       const jwtPayload = {
         id: decoded.id,
-        username: decoded.email,
+        username: decoded.username,
         role: decoded.role,
       };
 
       const access_token = jwt.sign(jwtPayload, process.env.JWT_SECRET_KEY, {
         expiresIn: "20s",
       });
-      res.json({access_token});
+      res.json({ access_token });
     });
   } catch (error) {
     res.status(500).json({
